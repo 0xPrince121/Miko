@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# env — commit only the template
+.env
+.env.*
+!.env.example
+
+# builds + type info
+dist/
+.next/
+*.tsbuildinfo
+
+# runtime data (SQLite database)
+data/
+
+# logs
+*.log
+npm-debug.log*
+
+# os
+.DS_Store

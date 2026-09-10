@@ -1,0 +1,25 @@
+{
+  "name": "miko",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Miko — a premium Discord ticket bot with a simple web dashboard",
+  "workspaces": [
+    "packages/db",
+    "bot",
+    "dashboard"
+  ],
+  "scripts": {
+    "dev:bot": "npm run dev --workspace @miko/bot",
+    "dev:dashboard": "npm run dev --workspace @miko/dashboard",
+    "build": "npm run build --workspace @miko/db && npm run build --workspace @miko/bot && npm run build --workspace @miko/dashboard",
+    "typecheck": "npm run typecheck --workspace @miko/db && npm run typecheck --workspace @miko/bot && npm run typecheck --workspace @miko/dashboard",
+    "start:bot": "npm run start --workspace @miko/bot",
+    "start:dashboard": "npm run start --workspace @miko/dashboard"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
